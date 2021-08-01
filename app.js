@@ -13,11 +13,11 @@ postInputUI.addEventListener("keyup", charCounter);
 function charCounter(e) {
   let len = postInputUI.value.length;
   char.textContent = len;
-  if (len < 250) {
+  if (len <= 250) {
     char.textContent = len;
     submitBtn.removeAttribute("disabled");
   }
-  if (len >= 250) {
+  if (len >= 251) {
     e.preventDefault();
     submitBtn.setAttribute("disabled", "disabled");
   }
