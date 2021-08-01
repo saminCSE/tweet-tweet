@@ -61,7 +61,7 @@ function addTweet() {
   data.id = id;
   data.text = postInputUI.value;
   data.unFomatTime = dayjs().format();
-  data.time = dayjs().format("YYYY-MMM-DD hh.mm a");
+  data.time = dayjs().format("DD-MMM-YYYY hh.mm a");
 
   if (data.text.length > 0 && data.text.length < 250) {
     tweetData.push(data);
