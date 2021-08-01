@@ -41,14 +41,25 @@
       <section class="main-body d-flex justify-content-between">
         <div class="submit-tweet">
           <form method="post">
-            <input
+            <!-- <input
               class="input-group"
               type="text"
               id="tweet-text"
+              maxlength="250"
               placeholder="Post A Tweet"
-            />
+            /> -->
+            <textarea
+              class="input-group"
+              type="text"
+              id="tweet-text"
+              maxlength="250"
+              placeholder="Post A Tweet"
+              cols="23"
+              rows="5"
+            >
+            </textarea>
           </form>
-          <p><span class="char-counter">0</span>/250</p>
+          <p><span class="char-counter" maxlength="250">0</span>/250</p>
           <button
             type="button"
             class="btn btn-outline-info btn-block btn-submit"

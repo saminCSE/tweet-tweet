@@ -4,19 +4,22 @@ const itemGroup = document.querySelector(".collection");
 const submitBtn = document.querySelector(".btn-submit");
 const searchInput = document.querySelector("#search");
 const errorMsg = document.querySelector(".error-msg");
+let num = 0;
 
 let char = document.querySelector(".char-counter");
 
 postInputUI.addEventListener("keyup", charCounter);
-// if i use keypress then backspace won't work.
+
 function charCounter(e) {
   let len = postInputUI.value.length;
   char.textContent = len;
   if (len < 250) {
     char.textContent = len;
+    submitBtn.removeAttribute("disabled");
   }
   if (len >= 250) {
     e.preventDefault();
+    submitBtn.setAttribute("disabled", "disabled");
   }
 }
 
